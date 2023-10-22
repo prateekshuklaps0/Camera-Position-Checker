@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  text-align: center;
+}
+
+body {
+  background: #000428; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    /* to bottom, */ #000428,
+    #004e92
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    /* to bottom, */ #000428,
+    #004e92
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100dvh;
+  overflow-y: scroll;
+}
+
+:root {
+  --main-color: #007bff;
+  --colorA: #1627c2;
+  --colorB: #2c3dd6;
+  --colorC: grey;
+  --wallColor: #dae1e7;
+  --font-size: 16px;
+  --familyA: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#Title {
+  color: white;
+  font-family: var(--familyA);
+  font-size: 30px;
+  margin-top: 25px;
+  margin-bottom: 30px;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 35px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 26px;
+    margin-top: 35px;
+    margin-bottom: 40px;
+  }
+}
+
+#BtnAndStatusCont {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  margin-bottom: 30px;
+
+  @media (max-width: 768px) {
+    width: 350px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 480px) {
+    width: 290px;
+    margin-bottom: 70px;
+  }
+}
+
+#BtnAndStatusCont button {
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: var(--colorA);
+  font-family: var(--familyA);
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 18px;
+
+  @media (max-width: 768px) {
+    border-radius: 5px;
+    padding: 8.5px 17.5px;
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
+    border-radius: 4px;
+    padding: 8px 17px;
+    font-size: 15px;
+  }
+}
+
+#BtnAndStatusCont button:hover {
+  background-color: var(--colorB);
+}
+
+#visibleText {
+  color: white;
+  border: 1px solid var(--colorC);
+  font-family: var(--familyA);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 8px 20px;
+  width: 200px;
+  font-size: 20px;
+
+  @media (max-width: 768px) {
+    border-radius: 8px;
+    padding: 4px 17.5px;
+    width: 180px;
+    font-size: 18px;
+  }
+
+  @media (max-width: 480px) {
+    border-radius: 6px;
+    padding: 3.5px 15px;
+    width: 165px;
+    font-size: 16px;
+  }
+}
+
+#visibleText span {
+  color: var(--colorC);
+  font-family: var(--familyA);
+  font-size: 26px;
+  font-weight: 500;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 21px;
+    font-weight: 500;
+  }
+}
+
+#parentFrame {
+  background-color: var(--wallColor);
+  border: 8px solid var(--main-color);
+  margin: auto;
+  width: 750px;
+  border-radius: 15px;
+
+  @media (max-width: 768px) {
+    width: 460px;
+    border-radius: 12px;
+  }
+
+  @media (max-width: 480px) {
+    border: 6px solid var(--main-color);
+    width: 330px;
+    border-radius: 10px;
+  }
+}
+
+#parentFrame img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+
+  @media (max-width: 768px) {
+    border-radius: 13px;
+  }
+
+  @media (max-width: 480px) {
+    border-radius: 11px;
+  }
+}
+
+#canvasContainer {
+  position: absolute;
+  background-color: black;
+  border: 10px solid var(--colorC);
+  width: 220px;
+  height: 220px;
+  margin-top: 20px;
+  margin-left: 160px;
+  border-radius: 10px;
+
+  @media (max-width: 768px) {
+    border: 8px solid var(--colorC);
+    width: 140px;
+    height: 140px;
+    margin-top: 10px;
+    margin-left: 98px;
+    border-radius: 8px;
+  }
+
+  @media (max-width: 480px) {
+    border: 5px solid var(--colorC);
+    width: 100px;
+    height: 100px;
+    margin-top: 7px;
+    margin-left: 70px;
+    border-radius: 6px;
+  }
+}
+
+#canvasContainer canvas {
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+  }
+}
